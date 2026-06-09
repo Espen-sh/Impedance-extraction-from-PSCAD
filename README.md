@@ -17,7 +17,7 @@ This is the main script. It defines:
 - plotting and stability-analysis workflow
 
 The script performs both a single-run example and a full multi-run extraction for a base case and a shaped case.
-This script is intended as a tutorial on how to use and understand the implemented 
+This script is intended as a tutorial on how to use and understand the implemented extraction method. 
 
 ### `Functions.py`
 
