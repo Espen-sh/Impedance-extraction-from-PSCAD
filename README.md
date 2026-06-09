@@ -1,12 +1,11 @@
 # Impedance-extraction-from-PSCAD
-# Impedance Extraction and Stability Analysis for an RLC Test System
+## Impedance Extraction and Stability Analysis
 
-This repository contains Python scripts for validating a multi-tone impedance
-measurement method on a simple three-phase RLC test system modeled in PSCAD.
+This repository contains Python scripts used in the masters thesis conducted by Espen Solberg Hågensen and Christoffer Strugstad Jenssen. 
 
 PSCAD output files for base case and tuned case can be found here: https://drive.google.com/drive/folders/1Zf5BuiLuLfIVf_3Fcok90znTn522aLff?usp=drive_link 
 
-### `Use.py`
+### `ImpedanceExtractionTutorial.py`
 Main script.
 
 - Computes analytical impedance of the RLC load and source.
