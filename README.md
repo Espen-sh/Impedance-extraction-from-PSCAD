@@ -2,16 +2,7 @@
 
 This repository contains the Python post-processing scripts used for impedance extraction and impedance-based stability analysis in the master thesis. The scripts are intended to support the methodology described in the thesis chapter on impedance extraction.
 
-The workflow is based on frequency-domain extraction from PSCAD time-domain simulations. Multi-tone positive- and negative-sequence perturbation files are used to identify 2×2 modified-sequence impedance matrices. These matrices are then converted to the dq domain and used for impedance plots, passivity analysis, and Nyquist-based stability assessment.
-
-## Repository contents
-
-```text
-.
-├── ImpedanceExtractionTutorial.py   # Main tutorial / example script
-├── Functions.py                     # Impedance extraction and plotting functions
-└── README.md
-```
+The workflow is based on frequency-domain extraction from PSCAD time-domain simulations. Multi-tone positive- and negative-sequence perturbation files are used to identify 2×2 modified-sequence impedance matrices. These matrices can then be converted to the dq domain and used for impedance plots, passivity analysis, and Nyquist-based stability assessment.
 
 ### `ImpedanceExtractionTutorial.py`
 
@@ -26,6 +17,7 @@ This is the main script. It defines:
 - plotting and stability-analysis workflow
 
 The script performs both a single-run example and a full multi-run extraction for a base case and a shaped case.
+This script is intended as a tutorial on how to use and understand the implemented 
 
 ### `Functions.py`
 
@@ -72,6 +64,9 @@ The scripts also assume that the PSCAD `.out` files are available locally. These
 ## Expected PSCAD output files
 
 By default, the tutorial script expects the PSCAD output files to be located in the same directory as `ImpedanceExtractionTutorial.py`.
+
+The output files for the base case and tuned case can be found and downloaded here: 
+https://drive.google.com/drive/folders/1Zf5BuiLuLfIVf_3Fcok90znTn522aLff?usp=drive_link
 
 The base-case files are expected to use the following naming convention:
 
@@ -182,31 +177,3 @@ The tutorial script produces figures for:
 - sideband signal-to-background quality metrics
 
 The exact output filenames are defined by the `title` arguments passed to the plotting functions.
-
-## Notes on sign convention
-
-For the source-side impedance calculation, the current is defined in the opposite direction compared with the load-side current. This is handled in `Functions.py` by applying a sign change to the source-side current matrix before solving for the source impedance.
-
-## Notes on reproducibility
-
-This repository contains the extraction and plotting scripts. The PSCAD simulation models and `.out` files may be too large or project-specific to include directly in the repository. To reproduce the thesis plots, the corresponding PSCAD simulation outputs must be generated first and placed in the expected directory.
-
-Before running the script on a new dataset, check:
-
-1. the file names in `RUN_BASE`, `RUN_SHAPED`, and `FILE_BASE`
-2. the PSCAD column mapping in `colmap`
-3. the voltage and current scaling factors
-4. the extraction time window
-5. the frequency lists used in the PSCAD injection model
-
-## Suggested citation
-
-If this repository is used or referenced, please cite the associated master thesis:
-
-```text
-Christoffer Strugstad Jenssen, "Impedance-Based Stability Analysis and Shaping of a Transmission System with Power-Electronic Devices", Master's thesis, Norwegian University of Science and Technology, 2026.
-```
-
-## License
-
-No license has been specified yet. Add a `LICENSE` file if the repository should be publicly reusable.
