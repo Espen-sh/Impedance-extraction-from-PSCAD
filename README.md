@@ -4,6 +4,8 @@
 This repository contains Python scripts for validating a multi-tone impedance
 measurement method on a simple three-phase RLC test system modeled in PSCAD.
 
+PSCAD output files for base case and tuned case can be found here: https://drive.google.com/drive/folders/1Zf5BuiLuLfIVf_3Fcok90znTn522aLff?usp=drive_link 
+
 ### `Use.py`
 Main script.
 
