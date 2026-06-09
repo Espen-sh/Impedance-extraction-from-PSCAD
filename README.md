@@ -1,6 +1,7 @@
 # Impedance Extraction and Stability Analysis
 
 This repository contains the Python post-processing scripts used for impedance extraction and impedance-based stability analysis in the master thesis. The scripts are intended to support the methodology described in the thesis chapter on impedance extraction.
+The repository also includes a model of the Power-from-Shore system in PSCAD, as well as the PSCAD library file used for this model. Note that the uploaded model is not the same one used to derive the results in the master thesis. Values, parameters and cable models are change or simplified because of confidentiality reasons. 
 
 The workflow is based on frequency-domain extraction from PSCAD time-domain simulations. Multi-tone positive- and negative-sequence perturbation files are used to identify 2×2 modified-sequence impedance matrices. These matrices can then be converted to the dq domain and used for impedance plots, passivity analysis, and Nyquist-based stability assessment.
 
