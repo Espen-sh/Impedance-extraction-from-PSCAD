@@ -7,7 +7,7 @@ The workflow is based on frequency-domain extraction from PSCAD time-domain simu
 
 ### `ImpedanceExtractionTutorial.py`
 
-This is the main script. It defines:
+This is a tutorial script. It defines:
 
 - PSCAD output file locations
 - signal column mapping
@@ -36,6 +36,12 @@ This file contains the supporting functions used by the tutorial script, includi
 - collecting several positive/negative injection runs into one frequency sweep
 - plotting Bode diagrams, passivity indices, Nyquist eigenvalue loci, and CoF-corrected diagonal impedances
 - computing signal-to-background quality metrics for extraction validation
+
+### `RunExtraction.py`
+
+This is a shorter driver script for the most common extraction workflow. It is intended for cases where PSCAD positive- and negative-sequence injection output files are already available, and the goal is to extract load-side and source-side dq impedances and run the main stability checks.
+
+Compared with ImpedanceExtractionTutorial.py, this script is more practical and less tutorial-based. Cases are defined in the CASES dictionary, selected through ACTIVE_CASES, and the desired outputs are enabled or disabled using simple toggles in the WHAT TO RUN section. The script can run either a single positive/negative file pair or a full numbered multi-run case. It can also overlay up to three cases in the Bode and passivity plots, generate Nyquist and CoF plots for each case, and optionally save a CSV file with the main stability summary.
 
 ## Method overview
 
